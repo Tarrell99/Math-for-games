@@ -11,6 +11,8 @@ public:
 	Vector3 operator * (Vector3 & rhs);
 	Vector3 operator == (Vector3 & rhs);
 	Vector3 operator != (Vector3 & rhs);
+	float Magnitude();
+	Vector3 Normalise();
 private:
 	float xPos;
 	float yPos;

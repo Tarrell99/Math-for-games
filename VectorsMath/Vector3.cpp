@@ -39,3 +39,13 @@ Vector3 Vector3::operator!=(Vector3 & rhs)
 {
 	return rhs;
 }
+
+float Vector3::Magnitude()
+{
+	return 0.0f;
+}
+
+Vector3 Vector3::Normalise()
+{
+	return Vector3();
+}
