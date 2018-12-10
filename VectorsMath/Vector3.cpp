@@ -6,16 +6,17 @@ Vector3::Vector3()
 
 float Vector3::GetX()
 {
-	return 0.0f;
+	return xPos;
 }
 
 float Vector3::GetY()
 {
-	return 0.0f;
+	return yPos;
 }
 
 Vector3 Vector3::operator+(Vector3 & rhs)
 {
+
 	return rhs;
 }
 
