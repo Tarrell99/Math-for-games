@@ -115,6 +115,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="Vectors2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Vectors2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
