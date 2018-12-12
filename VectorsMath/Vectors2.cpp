@@ -68,8 +68,8 @@ float Vector2::distance(Vector2 other)
 	return sqrtf(pow(other.xPos - xPos, 2) + pow(other.yPos - yPos, 2));
 }
 
-//float Vector2::DotPos(Vector2 other)
-//{
-//	return Vector2((xPos + other.xPos) + (yPos + other.yPos));
-//}
+float Vector2::DotPos(Vector2 other)
+{
+	return(xPos + other.xPos) + (yPos + other.yPos);
+}
 

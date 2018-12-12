@@ -74,3 +74,8 @@ float Vector3::distance(Vector3 other)
 {
 	return sqrtf(pow(other.xPos - xPos, 2) + pow(other.yPos - yPos, 2) + pow(other.zPos - zPos, 2));
 }
+
+Vector3 Vector3::Cross(Vector3 other)
+{
+	return Vector3((yPos * other.zPos) - (zPos * other.yPos));
+}

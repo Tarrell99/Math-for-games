@@ -16,6 +16,7 @@ public:
 	float Magnitude();
 	Vector3 Normalise();
 	float distance(Vector3 other);
+	Vector3 Cross(Vector3 other);
 private:
 	float xPos;
 	float yPos;
