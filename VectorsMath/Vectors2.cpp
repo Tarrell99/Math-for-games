@@ -4,6 +4,12 @@ Vector2::Vector2()
 {
 }
 
+Vector2::Vector2(float x, float y)
+{
+	xPos = x;
+	yPos = y;
+}
+
 float Vector2::GetX()
 {
 	return xPos;
@@ -16,41 +22,48 @@ float Vector2::GetY()
 
 Vector2 Vector2::operator+(Vector2 & rhs)
 {
-	// have the two sides add each other EX: <1,2> + <2,1> = <3,3> 
-	rhs.GetX + rhs.xPos && rhs.GetY + rhs.yPos = rhs;
-	return rhs;
+	return Vector2(xPos + rhs.xPos, yPos + rhs.yPos);
 }
 
 Vector2 Vector2::operator-(Vector2 & rhs)
 {
-
-	rhs.GetX - rhs.xPos && rhs.GetY - rhs.yPos = rhs;
-	return rhs;
+	return  Vector2(xPos - rhs.xPos, yPos - rhs.yPos);
 }
 
-Vector2 Vector2::operator*(Vector2 & rhs)
+Vector2 Vector2::operator*(float & rhs)
 {
-	rhs.xPos && rhs.yPos * rhs = rhs;
-	return rhs;
+	return Vector2(xPos * rhs, yPos * rhs);
 }
 
-Vector2 Vector2::operator==(Vector2 & rhs)
+bool Vector2::operator==(Vector2 & rhs)
 {
-	return rhs;
+	if (this->xPos == rhs.xPos && this->yPos == rhs.yPos)
+	{
+		return true;
+	}
+	return false;
 }
 
-Vector2 Vector2::operator!=(Vector2 & rhs)
+bool Vector2::operator!=(Vector2 & rhs)
 {
-
-	return rhs;
+	if (this->xPos != rhs.xPos || this->yPos != rhs.yPos)
+	{
+		return true;
+	}
+	return false;
 }
 
 float Vector2::Magnitude()
 {
-	return 0.0f;
+	return sqrtf(pow(xPos, 2) + pow(yPos, 2));
 }
 
 Vector2 Vector2::Normalise()
 {
-	return Vector2();
+	return Vector2((xPos / Magnitude()), (yPos / Magnitude()));
+}
+
+float Vector2::distance(Vector2 other)
+{
+	return sqrtf(pow(other.xPos - xPos, 2) + pow(other.yPos - yPos, 2));
 }
