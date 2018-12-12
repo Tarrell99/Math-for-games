@@ -17,4 +17,8 @@ int main()
 	
 	V1 == V6;
 	V1 != V6;
+
+	V1.Magnitude();
+	V1.Normalise();
+	V1.distance(V5);
 }
