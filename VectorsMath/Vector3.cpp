@@ -61,7 +61,7 @@ bool Vector3::operator!=(Vector3 & rhs)
 }
 
 float Vector3::Magnitude()
-{
+{                 // xPos * xPos
 	return sqrtf(pow(xPos, 2) + pow(yPos, 2) + pow(zPos, 2));
 }
 

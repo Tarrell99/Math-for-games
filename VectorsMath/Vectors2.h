@@ -1,5 +1,4 @@
 #pragma once
-#include<iostream>
 
 class Vector2
 {
@@ -16,6 +15,7 @@ public:
 	float Magnitude();
 	Vector2 Normalise();
 	float distance(Vector2 other);
+	float DotPos(Vector2 other);
 private:
 	float xPos;
 	float yPos;
